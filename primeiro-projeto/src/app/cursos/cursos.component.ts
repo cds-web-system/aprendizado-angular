@@ -12,6 +12,13 @@ import { Component } from '@angular/core';
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.css']
 })
-export class CursosComponent {
+export class CursosComponent { // Aqui na classe, colocamos nossa logica de programação, ex: javascript etc... para deixar mais dinâmico
+// passando valor da variavel para cursos.component
+  minhaVar: string;
 
+  meuArray: string[] = ['Angular', 'Typescript', 'Html'];
+
+  constructor(){
+    this.minhaVar = "Aqui é o texto passado por pela variavel";
+  }
 }

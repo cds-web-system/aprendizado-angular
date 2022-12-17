@@ -17,5 +17,6 @@ import {Component} from '@angular/core'
 
 // devemos importar no app.module.ts o nome da classa abaixo
 export class PrimeiroComponent{
+  // Aqui na classe, colocamos nossa logica de programação, ex: javascript etc... para deixar mais dinâmico
   teste = "Teste template via arquivo html";
 }

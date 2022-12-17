@@ -18,4 +18,4 @@ import { CursosDetalheComponent } from './cursos-detalhe/cursos-detalhe.componen
     CursosComponent
   ]
 })
-export class CursosModule { }
+export class CursosModule {}
