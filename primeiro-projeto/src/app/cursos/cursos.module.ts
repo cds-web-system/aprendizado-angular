@@ -1,3 +1,4 @@
+import { CursosService } from './cursos.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CursosComponent } from './cursos.component';
@@ -16,6 +17,9 @@ import { CursosDetalheComponent } from './cursos-detalhe/cursos-detalhe.componen
   // criamos o exports para dizer que estamos expondo o CursosComponents para o angular e no qual usaremos no imports do app.module.ts
   exports:[
     CursosComponent
+  ],
+  providers:[
+    CursosService
   ]
 })
 export class CursosModule {}

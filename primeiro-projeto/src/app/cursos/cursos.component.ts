@@ -6,6 +6,7 @@
  */
 
 import { Component } from '@angular/core';
+import {CursosService} from './cursos.service';
 
 @Component({
   selector: 'app-cursos',
@@ -13,12 +14,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent { // Aqui na classe, colocamos nossa logica de programação, ex: javascript etc... para deixar mais dinâmico
-// passando valor da variavel para cursos.component
+// passando valor da variavel para cursos.component.html
   minhaVar: string;
 
-  meuArray: string[] = ['Angular', 'Typescript', 'Html'];
-
-  constructor(){
+  meuArray: string[];
+  // aplicando injeção de dependencia da classe CursosService no construtor
+  constructor(private cursosService: CursosService){
     this.minhaVar = "Aqui é o texto passado por pela variavel";
+
+    this.meuArray = this.cursosService.getCursos();
   }
 }
