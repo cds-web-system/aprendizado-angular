@@ -1,0 +1,28 @@
+
+<section>
+  <article>Interpolation / Interpolação
+    <p>
+      Mostrando valor da varia url declarado no data-binding,component.ts com metodor interpolação: valor é
+      <b>{{ url }} </b>
+    </p>
+    <p>Resultado 2 + 2 é: {{2+2}}</p>
+    <p>Chamando get no component via interpolação: <b>{{getEx1()}}</b> </p>
+    <p>Usando expressão lógica: <b>{{ ex2 && getEx3() }}</b></p>
+  </article>
+
+  <article>
+    <h3>Manipulando imagens com Interpolação</h3>
+    <p>Carregando imagem via interpolação</p>
+    <img src="{{ ex4 }}" alt="">
+
+    <p>Carregando imagem com  property binding [src]</p>
+    <img [src]="ex4" alt="">
+
+    <p>Carregando imagem com  property binding bind-src</p>
+    <img bind-src="ex4" alt="">
+
+    <p>Quando não existir uma propriedade no elemento, usa-se [attr.colspan]</p>
+
+  </article>
+
+</section>

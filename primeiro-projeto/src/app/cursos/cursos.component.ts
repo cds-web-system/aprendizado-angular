@@ -6,20 +6,31 @@
  */
 
 import { Component } from '@angular/core';
-import {CursosService} from './cursos.service';
+import {CursosService} from './cursos.service'; // importando o cursos.service.ts
 
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.css']
 })
-export class CursosComponent { // Aqui na classe, colocamos nossa logica de programação, ex: javascript etc... para deixar mais dinâmico
-// passando valor da variavel para cursos.component.html
+
+/* Aqui na classe, colocamos nossa logica de programação ou instanciamos os metodos de cursos.service que de boa pratica adicionamos a logica, ex: javascript etc... para deixar mais dinâmico */
+export class CursosComponent {
+
+  // passando valor da variavel para cursos.component.html
   minhaVar: string;
 
+  // definindo variavel array
   meuArray: string[];
-  // aplicando injeção de dependencia da classe CursosService no construtor
+
+  /*
+    Aplicando injeção de dependencia da classe CursosService na inicialização do construtor
+    private cursosService: CursosService
+    poderiamos também:
+    cursosService = new CursosService
+  */
   constructor(private cursosService: CursosService){
+
     this.minhaVar = "Aqui é o texto passado por pela variavel";
 
     this.meuArray = this.cursosService.getCursos();

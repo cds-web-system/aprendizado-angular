@@ -1,0 +1,55 @@
+
+
+<article>
+  <h1>data-binding-css</h1>
+  <p>Trabalhando com Bootstrap CSS</p>
+  <div>
+    Selecione uma Classe
+    <!-- Criando varivale local de template com # + variavel e: #clasee
+      E para escutar envento de mudança (change)-->
+    <select #classe (change)="0" name="" id="">
+      <option value="">Selecionar</option>
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Alerta</option>
+      <option value="alert-danger">Erro</option>
+    </select>
+    <br><br>
+    <!-- Adicionando class binding atravé de [] conchetes
+      [class.alert-success]="classe.value == 'alert-sucess'
+      se "classe.value == 'alert-sucess' é aplicado o binding elert-success
+    -->
+    <div class="alert" role="alert"
+    [class.alert-success]="classe.value == 'alert-success'">
+      A simple success alert—check it out!
+    </div>
+    <div class="alert" role="alert"
+    [class.alert-info]="classe.value == 'alert-info'">
+      A simple danger alert—check it out!
+    </div>
+    <div class="alert" role="alert"
+    [class.alert-warning]="classe.value == 'alert-warning'">
+      A simple warning alert—check it out!
+    </div>
+    <div class="alert" role="alert"
+    [class.alert-danger]="classe.value == 'alert-danger'">
+      A simple info alert—check it out!
+    </div>
+  </div>
+  <!-- Aplicando class binding com interpolação -->
+  <div class="alert {{classe.value}}" role="'alert" >
+    Elemento colorido conforme valor da combox com Interpolação
+  </div>
+
+  <!-- Aplicando style bind -->
+  <div class="alert alert-danger" role="alert"
+  [style.display]= "classe.value == 'alert-danger' ? 'block' : 'none' ">
+    Esse texto so aparece em caso de erro
+  </div>
+
+
+</article>
+
+
+
+
