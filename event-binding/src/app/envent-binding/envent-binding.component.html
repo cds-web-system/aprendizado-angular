@@ -1,0 +1,26 @@
+<section class="container">
+  <article>
+    <div>
+      <h3>Aplicando <b>Event Binding</b> ou seja, como escutar eventos no html </h3>
+      <!-- Quando desejamos escutar eventos no angular usamos () ou on-nome_do_evento ex: on-click -->
+      <button  (click)="getBotaoClicado()" class="btn btn-primary">Clique aqui, usando (click)!!</button><br><br>
+      <button  on-click="getBotaoClicado()" class="btn btn-primary">Clique aqui, usando on-click</button>
+    </div>
+    <br>
+
+    <input #campoInput type="text"
+     (keyup)="digitando($event)"
+     (keyup.enter)="salvar(campoInput.value)"
+     (blur)="salvar(campoInput.value)" >
+  </article>
+
+  <p>Valor que esta sendo digitado: {{valorAtual}}</p>
+  <p>Valor salvo: {{valorSalvo}}</p>
+
+  <span
+  (mouseover)="mouseSobre()"
+  (mouseout)="mouseSaiu()"
+  [class.mouseSobre]="isMouseSobre"
+  >Passe o mouse sobre mim</span>
+
+</section>

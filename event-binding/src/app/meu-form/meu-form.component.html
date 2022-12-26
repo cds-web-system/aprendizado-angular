@@ -1,0 +1,27 @@
+
+<section class="container">
+  <article>
+    <h3>Two-way Data Binding</h3>
+    <div >
+      <!-- <input #e type="text"
+      [value]="nome"
+      (input)="nome = e.value"
+      > -->
+      <br>
+      <br>
+      <!-- two way data bind [(ngModel)] para funcionar foi preciso importar import { FormsModule } from '@angular/forms'; no app.modules e adicionar FormsModule no array imports  -->
+      <!-- [()] bind[] + event() = [()] no exemplo abaixo se colocar bindon-ngModel="nome" também ira funcionar -->
+     <input type="text" [(ngModel)]="nome">
+     <input type="text" bindon-ngModel="nome">
+    </div>
+    <br><br><br>
+    <div>
+      <h4>two way data bind usando objeto no componente</h4>
+      <input type="text" [(ngModel)]="pessoa.nome">
+      <input type="text" [(ngModel)]="pessoa.idade">
+      <p>Meu nome é {{pessoa.nome}} e tenho {{pessoa.idade}} anos</p>
+    </div>
+    <br>
+    <p>Você digitou: <b>{{nome}}</b></p>
+  </article>
+</section>
